@@ -1,0 +1,81 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1715009561905' stop='1715009732599'>
+    <name>Al-Jazeera Live Player Test:</name>
+    <title>Al-Jazeera Live Player Test:</title>
+    <test-cases>
+        <test-case start='1715009561907' status='passed' stop='1715009645063'>
+            <name>Verify Livestream Player is visible @amir</name>
+            <title>Verify Livestream Player is visible @amir</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@amir'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1715009563466' status='passed' stop='1715009644984'>
+                    <name>I am on page "https://aljazeera.com/live"</name>
+                    <title>I am on page "https://aljazeera.com/live"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715009644985' status='passed' stop='1715009645034'>
+                    <name>I wait for visible ".aj-video-player", 17</name>
+                    <title>I wait for visible ".aj-video-player", 17</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715009645034' status='passed' stop='1715009645052'>
+                    <name>I see element ".aj-video-player"</name>
+                    <title>I see element ".aj-video-player"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715009645052' status='passed' stop='1715009645063'>
+                    <name>I see element in dom ".aj-video-player"</name>
+                    <title>I see element in dom ".aj-video-player"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1715009645181' status='passed' stop='1715009732511'>
+            <name>Verify Switch Player button is visible in Livestream Player @amir</name>
+            <title>Verify Switch Player button is visible in Livestream Player @amir</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@amir'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1715009646773' status='passed' stop='1715009732435'>
+                    <name>I am on page "https://aljazeera.com/live"</name>
+                    <title>I am on page "https://aljazeera.com/live"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715009732436' status='passed' stop='1715009732478'>
+                    <name>I wait for visible "//button[@id="liveStreamPlayerHelpButton"]", 17</name>
+                    <title>I wait for visible "//button[@id="liveStreamPlayerHelpButton"]", 17</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715009732478' status='passed' stop='1715009732499'>
+                    <name>I see element "//button[@id="liveStreamPlayerHelpButton"]"</name>
+                    <title>I see element "//button[@id="liveStreamPlayerHelpButton"]"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715009732499' status='passed' stop='1715009732511'>
+                    <name>I see element in dom "//button[@id="liveStreamPlayerHelpButton"]"</name>
+                    <title>I see element in dom "//button[@id="liveStreamPlayerHelpButton"]"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -5,21 +5,21 @@ const HomePage = require('../page_objects/AlJazeeraHomePage');
 
 Feature("Testing Al-Jazeera home page's most read section");
 
-// //Scenario 1: on Desktop make sure the "Most Read" section is appearing.
-// Scenario('Verify "Most Read" section is visible', async () => {
+//Scenario 1: on Desktop make sure the "Most Read" section is appearing.
+Scenario('Verify "Most Read" section is visible', async () => {
 
-//   // Navigate to the homepage
-//   I.amOnPage('/');
+  // Navigate to the homepage
+  I.amOnPage('/');
 
-//   // Create an instance of HomePage
-//   const homePage = new HomePage();
+  // Create an instance of HomePage
+  const homePage = new HomePage();
 
-//   // Wait for the most read section to appear
-//   const areElementsVisible = I.seeElement(homePage.elements.mostPopular);
-//   if (!areElementsVisible) {
-//     throw new Error('No elements with class "trending-articles" are visible');
-//   }
-// }).tag('@desktop');
+  // Wait for the most read section to appear
+  const areElementsVisible = I.seeElement(homePage.elements.mostPopular);
+  if (!areElementsVisible) {
+    throw new Error('No elements with class "trending-articles" are visible');
+  }
+}).tag('@desktop');
 
 //Scenario 2: on Desktop make sure the "Most Popular" section has 10 posts.
 Scenario('Verify the number of <li> items in <ol> element', async () => {
@@ -77,30 +77,30 @@ Scenario('Verify "Most Popular" section is NOT visible on Mobile', (I) => {
 }).tag('@mobile');
 
 
-// //Scenario 4: on Desktop make sure bypass block menu item for "Most Read" is working (accessibility)
-// Scenario('Verify "Skip to Most Read" functionality', async () => {
+//Scenario 4: on Desktop make sure bypass block menu item for "Most Read" is working (accessibility)
+Scenario('Verify "Skip to Most Read" functionality', async () => {
 
-//   // Navigate to the homepage
-//   I.amOnPage('/');
+  // Navigate to the homepage
+  I.amOnPage('/');
 
-//   // Create an instance of HomePage
-//   const homePage = new HomePage();
+  // Create an instance of HomePage
+  const homePage = new HomePage();
 
-//   // Wait for the bypass blocks menu to appear
-//   I.waitForVisible(homePage.elements.bypassBlocksMenu)
+  // Wait for the bypass blocks menu to appear
+  I.waitForVisible(homePage.elements.bypassBlocksMenu)
 
-//   // Click on the empty space left of the logo to activate the bypass blocks menu
-//   homePage.clickEmptySpaceLeftOfLogo();
+  // Click on the empty space left of the logo to activate the bypass blocks menu
+  homePage.clickEmptySpaceLeftOfLogo();
 
-//   // Trigger "Skip to Most Read" functionality
-//   homePage.skipToMostRead();
+  // Trigger "Skip to Most Read" functionality
+  homePage.skipToMostRead();
 
-//   // NOT SURE IF THIS IS NECESSARY to check the auto scroll ??????
-//   // Wait for 'Most Popular' section appears after auto scroll
-//   I.waitForVisible(homePage.elements.mostPopular, 5);
+  // NOT SURE IF THIS IS NECESSARY to check the auto scroll ??????
+  // Wait for 'Most Popular' section appears after auto scroll
+  I.waitForVisible(homePage.elements.mostPopular, 5);
 
-//   const currentUrl = await I.grabCurrentUrl();
-//   if (!currentUrl.includes('#most-read-container')) {
-//     throw new Error('URL should contain "#most-read-container"');
-//   }
-// }).tag('@desktop');
+  const currentUrl = await I.grabCurrentUrl();
+  if (!currentUrl.includes('#most-read-container')) {
+    throw new Error('URL should contain "#most-read-container"');
+  }
+}).tag('@desktop');

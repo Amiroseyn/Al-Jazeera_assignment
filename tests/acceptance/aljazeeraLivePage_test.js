@@ -6,7 +6,7 @@ const HomePage = require('../page_objects/AlJazeeraLivePage');
 Feature('Al-Jazeera Live Player Test');
 
 // Scenario 1: validate Player is visible in Livestream Player
-Scenario('Validate Player is visible in Livestream Player', async () => {
+Scenario('Verify Livestream Player is visible', async () => {
   // Open Al-Jazeera live Player URL
   I.amOnPage('https://aljazeera.com/live');
 
@@ -26,7 +26,7 @@ Scenario('Validate Player is visible in Livestream Player', async () => {
 }).tag('@amir');
 
 // Scenario 2: validate Switch Player button is visible in Livestream Player
-Scenario('Validate "Switch Player" button is visible in Livestream Player', async () => {
+Scenario('Verify Switch Player button is visible in Livestream Player', async () => {
     // Open Al-Jazeera live Player URL
     I.amOnPage('https://aljazeera.com/live'); // This is not consistant with the other test ?????
 

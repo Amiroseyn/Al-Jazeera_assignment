@@ -16,10 +16,19 @@ exports.config = {
       browser: 'chrome'
     }
   },
+  capabilities: [{
+    browserName: 'chrome',
+    'goog:chromeOptions': {
+      mobileEmulation: {
+        deviceName: 'iPhone X' // Set your desired device here
+      }
+    }
+  }],
   plugins: {
     allure: {
       enabled: true,
       require: '@codeceptjs/allure-legacy',
+      outputDir: './reports/allure-results'
     }
   },
   include: {
