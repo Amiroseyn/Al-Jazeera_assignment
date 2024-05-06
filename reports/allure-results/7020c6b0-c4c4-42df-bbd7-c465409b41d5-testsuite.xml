@@ -1,9 +1,9 @@
 <?xml version='1.0'?>
-<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1715022522170' stop='1715022834112'>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1715031280091' stop='1715031408348'>
     <name>Testing Al-Jazeera home page's most popular section:</name>
     <title>Testing Al-Jazeera home page's most popular section:</title>
     <test-cases>
-        <test-case start='1715022522172' status='passed' stop='1715022629783'>
+        <test-case start='1715031280094' status='passed' stop='1715031390226'>
             <name>Verify "Most Popular" section is visible @desktop</name>
             <title>Verify "Most Popular" section is visible @desktop</title>
             <labels>
@@ -13,13 +13,13 @@
             </labels>
             <parameters/>
             <steps>
-                <step start='1715022524171' status='passed' stop='1715022629721'>
+                <step start='1715031284136' status='passed' stop='1715031390143'>
                     <name>I am on page "/"</name>
                     <title>I am on page "/"</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715022629722' status='passed' stop='1715022629783'>
+                <step start='1715031390144' status='passed' stop='1715031390226'>
                     <name>I see element ".trending-articles__list"</name>
                     <title>I see element ".trending-articles__list"</title>
                     <attachments/>
@@ -28,7 +28,7 @@
             </steps>
             <attachments/>
         </test-case>
-        <test-case start='1715022629909' status='passed' stop='1715022740426'>
+        <test-case start='1715031390322' status='passed' stop='1715031395785'>
             <name>Verify the number of &lt;li> items in &lt;ol> element @desktop</name>
             <title>Verify the number of &lt;li> items in &lt;ol> element @desktop</title>
             <labels>
@@ -38,19 +38,19 @@
             </labels>
             <parameters/>
             <steps>
-                <step start='1715022631743' status='passed' stop='1715022740292'>
+                <step start='1715031391990' status='passed' stop='1715031394699'>
                     <name>I am on page "/"</name>
                     <title>I am on page "/"</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715022740293' status='passed' stop='1715022740332'>
+                <step start='1715031394703' status='passed' stop='1715031395168'>
                     <name>I wait for element ".trending-articles__list"</name>
                     <title>I wait for element ".trending-articles__list"</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715022740332' status='passed' stop='1715022740426'>
+                <step start='1715031395170' status='passed' stop='1715031395785'>
                     <name>I grab number of visible elements ".trending-articles__list > li"</name>
                     <title>I grab number of visible elements ".trending-articles__list > li"</title>
                     <attachments/>
@@ -59,7 +59,7 @@
             </steps>
             <attachments/>
         </test-case>
-        <test-case start='1715022740490' status='passed' stop='1715022746621'>
+        <test-case start='1715031395796' status='passed' stop='1715031399980'>
             <name>Verify "Most Popular" section is NOT visible on Mobile @mobile</name>
             <title>Verify "Most Popular" section is NOT visible on Mobile @mobile</title>
             <labels>
@@ -69,19 +69,19 @@
             </labels>
             <parameters/>
             <steps>
-                <step start='1715022742188' status='passed' stop='1715022742192'>
+                <step start='1715031397309' status='passed' stop='1715031397324'>
                     <name>I resize window 375, 812</name>
                     <title>I resize window 375, 812</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715022742192' status='passed' stop='1715022746596'>
+                <step start='1715031397324' status='passed' stop='1715031399954'>
                     <name>I am on page "/"</name>
                     <title>I am on page "/"</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715022746597' status='passed' stop='1715022746621'>
+                <step start='1715031399954' status='passed' stop='1715031399980'>
                     <name>I dont see element ".trending-articles__list"</name>
                     <title>I dont see element ".trending-articles__list"</title>
                     <attachments/>
@@ -90,7 +90,7 @@
             </steps>
             <attachments/>
         </test-case>
-        <test-case start='1715022746624' status='passed' stop='1715022834071'>
+        <test-case start='1715031399984' status='passed' stop='1715031408316'>
             <name>Verify "Skip to Most Read" functionality @desktop</name>
             <title>Verify "Skip to Most Read" functionality @desktop</title>
             <labels>
@@ -100,49 +100,49 @@
             </labels>
             <parameters/>
             <steps>
-                <step start='1715022748042' status='passed' stop='1715022831634'>
+                <step start='1715031401375' status='passed' stop='1715031406246'>
                     <name>I am on page "/"</name>
                     <title>I am on page "/"</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715022831635' status='passed' stop='1715022831679'>
+                <step start='1715031406246' status='passed' stop='1715031406285'>
                     <name>I wait for visible ".bypass-block-links-container"</name>
                     <title>I wait for visible ".bypass-block-links-container"</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715022831679' status='passed' stop='1715022831725'>
+                <step start='1715031406285' status='passed' stop='1715031406362'>
                     <name>I click "//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]"</name>
                     <title>I click "//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]"</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715022831725' status='passed' stop='1715022831750'>
+                <step start='1715031406363' status='passed' stop='1715031406398'>
                     <name>I press key ["Tab"]</name>
                     <title>I press key ["Tab"]</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715022831750' status='passed' stop='1715022833265'>
+                <step start='1715031406398' status='passed' stop='1715031407917'>
                     <name>I click "a[href="#most-read-container"]"</name>
                     <title>I click "a[href="#most-read-container"]"</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715022833265' status='passed' stop='1715022833701'>
+                <step start='1715031407918' status='passed' stop='1715031408303'>
                     <name>I wait for visible ".trending-articles__list", 5</name>
                     <title>I wait for visible ".trending-articles__list", 5</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715022833702' status='passed' stop='1715022833817'>
+                <step start='1715031408303' status='passed' stop='1715031408308'>
                     <name>I grab current url </name>
                     <title>I grab current url </title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715022833817' status='passed' stop='1715022834071'>
+                <step start='1715031408308' status='passed' stop='1715031408316'>
                     <name>I see in current url "#most-read-container"</name>
                     <title>I see in current url "#most-read-container"</title>
                     <attachments/>

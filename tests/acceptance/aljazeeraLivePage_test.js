@@ -5,19 +5,29 @@ Feature('Al-Jazeera Live Player Test');
 
 // Scenario 1: validate Player is visible in Livestream Player
 Scenario('Verify Livestream Player is visible', async () => {
-  try {
-    I.amOnPage('/live');
-    const homePage = new HomePage();
-    const playerSelector = homePage.elements.playerSelector;
-  
-    I.waitForVisible(playerSelector, 17);
-    I.seeElement(playerSelector);
-    I.seeElementInDOM(playerSelector); // Confirm element is in the DOM and visible
-  } catch (error) {
-    console.error('The Video Player is not visible on the page:', error);
-    throw error;
-  }
-}).tag('@live');
+    try {
+      I.amOnPage('/live');
+      const homePage = new HomePage();
+      const playerSelector = homePage.elements.playerSelector;
+      const adVisible = await I.grabNumberOfVisibleElements(homePage.elements.adSelector) > 0;
+
+      if (adVisible) {
+        I.wait(6);
+        const adStillVisible = await I.grabNumberOfVisibleElements(homePage.elements.adSelector) > 0;
+        if (adStillVisible) {
+          I.click(homePage.elements.skipAdButtonSelector);
+        I.wait(2);
+        }
+      }
+
+      I.waitForVisible(playerSelector);
+      I.seeElement(playerSelector);
+
+    } catch (error) {
+      console.error('Error occurred during Livestream Player verification:', error);
+      throw error;
+    }
+  }).tag('@live');
 
 // Scenario 2: validate Switch Player button is visible in Livestream Player
 Scenario('Verify Switch Player button is visible in Livestream Player', async () => {
