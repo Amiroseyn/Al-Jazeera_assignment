@@ -1,9 +1,9 @@
 <?xml version='1.0'?>
-<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1715020280334' stop='1715020502263'>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1715022834171' stop='1715022947331'>
     <name>Al-Jazeera Live Player Test:</name>
     <title>Al-Jazeera Live Player Test:</title>
     <test-cases>
-        <test-case start='1715020280336' status='passed' stop='1715020497240'>
+        <test-case start='1715022834172' status='passed' stop='1715022942048'>
             <name>Verify Livestream Player is visible @live</name>
             <title>Verify Livestream Player is visible @live</title>
             <labels>
@@ -13,25 +13,25 @@
             </labels>
             <parameters/>
             <steps>
-                <step start='1715020282818' status='passed' stop='1715020497115'>
-                    <name>I am on page "https://aljazeera.com/live"</name>
-                    <title>I am on page "https://aljazeera.com/live"</title>
+                <step start='1715022835734' status='passed' stop='1715022941970'>
+                    <name>I am on page "/live"</name>
+                    <title>I am on page "/live"</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715020497117' status='passed' stop='1715020497182'>
+                <step start='1715022941971' status='passed' stop='1715022942017'>
                     <name>I wait for visible ".aj-video-player", 17</name>
                     <title>I wait for visible ".aj-video-player", 17</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715020497182' status='passed' stop='1715020497218'>
+                <step start='1715022942018' status='passed' stop='1715022942035'>
                     <name>I see element ".aj-video-player"</name>
                     <title>I see element ".aj-video-player"</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715020497218' status='passed' stop='1715020497239'>
+                <step start='1715022942035' status='passed' stop='1715022942048'>
                     <name>I see element in dom ".aj-video-player"</name>
                     <title>I see element in dom ".aj-video-player"</title>
                     <attachments/>
@@ -40,7 +40,7 @@
             </steps>
             <attachments/>
         </test-case>
-        <test-case start='1715020497322' status='passed' stop='1715020502257'>
+        <test-case start='1715022942147' status='passed' stop='1715022947314'>
             <name>Verify Switch Player button is visible in Livestream Player @live</name>
             <title>Verify Switch Player button is visible in Livestream Player @live</title>
             <labels>
@@ -50,19 +50,19 @@
             </labels>
             <parameters/>
             <steps>
-                <step start='1715020498993' status='passed' stop='1715020502207'>
-                    <name>I am on page "https://aljazeera.com/live"</name>
-                    <title>I am on page "https://aljazeera.com/live"</title>
+                <step start='1715022943672' status='passed' stop='1715022947210'>
+                    <name>I am on page "/live"</name>
+                    <title>I am on page "/live"</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715020502207' status='passed' stop='1715020502243'>
+                <step start='1715022947211' status='passed' stop='1715022947288'>
                     <name>I wait for visible "//button[@id="liveStreamPlayerHelpButton"]"</name>
                     <title>I wait for visible "//button[@id="liveStreamPlayerHelpButton"]"</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1715020502243' status='passed' stop='1715020502257'>
+                <step start='1715022947289' status='passed' stop='1715022947313'>
                     <name>I see element "//button[@id="liveStreamPlayerHelpButton"]"</name>
                     <title>I see element "//button[@id="liveStreamPlayerHelpButton"]"</title>
                     <attachments/>

@@ -2,20 +2,21 @@ const { I } = inject();
 const { assert, error } = require('console');
 const HomePage = require('../page_objects/AlJazeeraHomePage');
 
-Feature("Testing Al-Jazeera home page's most read section");
+Feature("Testing Al-Jazeera home page's most popular section");
 
-// Scenario 1: on Desktop make sure the "Most Read" section is appearing.
-Scenario('Verify "Most Read" section is visible', async () => {
+// Scenario 1: on Desktop make sure the "Most Popular" section is appearing.
+Scenario('Verify "Most Popular" section is visible', async () => {
   try {
     I.amOnPage('/');
     const homePage = new HomePage();
     I.seeElement(homePage.elements.mostPopular);
   } catch (error) {
-    console.error("Failed to verify visibility of the Most Read section on Desktop:", error);
+    console.error("Failed to verify visibility of the Most Popular section on Desktop:", error);
     throw error;
   }
 }).tag('@desktop');
 
+// Scenario 2: on Desktop make sure the "Most Popular" section has 10 posts.
 Scenario('Verify the number of <li> items in <ol> element', async () => {
   try {
     I.amOnPage('/');

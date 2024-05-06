@@ -1,13 +1,9 @@
 const { I } = inject();
+const locators = require('./locators');
 
 class HomePage {
   constructor() {
-    this.elements = {
-      logo: "//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]", // Selector for the website header
-      skipToMostReadLink: 'a[href="#most-read-container"]', // Selector for the "Skip to Most Read" link
-      bypassBlocksMenu: '.bypass-block-links-container', // Selector for the bypass blocks menu
-      mostPopular:  '.trending-articles__list' // CSS selector for Most Popular section
-    };
+    this.elements = locators; 
   }
 
   // Method to click on the empty space left of the logo
