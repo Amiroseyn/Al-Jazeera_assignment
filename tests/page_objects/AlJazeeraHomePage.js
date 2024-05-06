@@ -6,7 +6,7 @@ class HomePage {
       logo: "//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]", // Selector for the website header
       skipToMostReadLink: 'a[href="#most-read-container"]', // Selector for the "Skip to Most Read" link
       bypassBlocksMenu: '.bypass-block-links-container', // Selector for the bypass blocks menu
-      mostPopular:  '.trending-articles' // CSS selector for Most Popular section
+      mostPopular:  '.trending-articles__list' // CSS selector for Most Popular section
     };
   }
 

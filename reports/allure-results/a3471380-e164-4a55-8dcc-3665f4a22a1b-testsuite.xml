@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1715019302138' stop='1715019388686'>
+    <name>Testing Al-Jazeera home page's most read section:</name>
+    <title>Testing Al-Jazeera home page's most read section:</title>
+    <test-cases>
+        <test-case start='1715019302140' status='failed' stop='1715019387963'>
+            <name>Verify the number of &lt;li> items in &lt;ol> element @desktop2</name>
+            <title>Verify the number of &lt;li> items in &lt;ol> element @desktop2</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@desktop2'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1715019304631' status='passed' stop='1715019387877'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715019387878' status='passed' stop='1715019387913'>
+                    <name>I wait for element ".trending-articles"</name>
+                    <title>I wait for element ".trending-articles"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715019387913' status='passed' stop='1715019387959'>
+                    <name>I grab number of visible elements ".trending-articles > li"</name>
+                    <title>I grab number of visible elements ".trending-articles > li"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Main session - Last Seen Screenshot' source='9531be68-0fef-40d0-baf7-23f2af49ca3a-attachment.png' type='image/png' size='1894794'/>
+            </attachments>
+            <failure>
+                <message>Expected 10 items, but found $(LiCount)</message>
+                <stack-trace>Error: Expected 10 items, but found $(LiCount)
+                    at Test.&lt;anonymous> (/Users/amiros/Desktop/Al-Jazeera_assignment/tests/acceptance/aljazeeraHomePage_test.js:27:13)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -20,7 +20,7 @@ exports.config = {
     browserName: 'chrome',
     'goog:chromeOptions': {
       mobileEmulation: {
-        deviceName: 'iPhone X' // Set your desired device here
+        deviceName: 'iPhone X'
       }
     }
   }],

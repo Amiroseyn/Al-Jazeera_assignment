@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1715013768435' stop='1715013774157'>
+    <name>Testing Al-Jazeera home page's most read section:</name>
+    <title>Testing Al-Jazeera home page's most read section:</title>
+    <test-cases>
+        <test-case start='1715013768437' status='failed' stop='1715013773569'>
+            <name>Verify "Most Popular" section is NOT visible on Mobile @mobile</name>
+            <title>Verify "Most Popular" section is NOT visible on Mobile @mobile</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@mobile'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1715013770000' status='passed' stop='1715013770105'>
+                    <name>I resize window 375, 812</name>
+                    <title>I resize window 375, 812</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715013770106' status='passed' stop='1715013772481'>
+                    <name>I am on page "https://aljazeera.com/"</name>
+                    <title>I am on page "https://aljazeera.com/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715013772482' status='failed' stop='1715013773568'>
+                    <name>I see element ".trending-articles", {"timeout":5000,"state":"hidden"}</name>
+                    <title>I see element ".trending-articles", {"timeout":5000,"state":"hidden"}</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Main session - Last Seen Screenshot' source='2584662c-fa09-4a52-be1e-41c6c45999b6-attachment.png' type='image/png' size='219195'/>
+            </attachments>
+            <failure>
+                <message>Element ".trending-articles" is not visible on page.</message>
+                <stack-trace>Error: Element ".trending-articles" is not visible on page.
+                    at dontSeeElementError (/Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/codeceptjs/lib/helper/errors/ElementAssertion.js:23:9)
+                    at Puppeteer.seeElement (/Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/codeceptjs/lib/helper/Puppeteer.js:1054:7)
+                    at async Test.&lt;anonymous> (/Users/amiros/Desktop/Al-Jazeera_assignment/tests/acceptance/aljazeeraHomePage_test.js:60:30)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

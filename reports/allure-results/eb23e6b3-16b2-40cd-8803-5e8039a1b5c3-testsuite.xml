@@ -1,0 +1,54 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1715017599906' stop='1715017604190'>
+    <name>Testing Al-Jazeera home page's most read section:</name>
+    <title>Testing Al-Jazeera home page's most read section:</title>
+    <test-cases>
+        <test-case start='1715017599908' status='failed' stop='1715017604069'>
+            <name>Verify "Most Popular" section is NOT visible on Mobile @mobile</name>
+            <title>Verify "Most Popular" section is NOT visible on Mobile @mobile</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@mobile'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1715017601738' status='passed' stop='1715017601746'>
+                    <name>I resize window 375, 812</name>
+                    <title>I resize window 375, 812</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715017601746' status='passed' stop='1715017604003'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715017604003' status='passed' stop='1715017604068'>
+                    <name>I dont see element ".trending-articles", {"timeout":5000,"state":"hidden"}</name>
+                    <title>I dont see element ".trending-articles", {"timeout":5000,"state":"hidden"}</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Main session - Last Seen Screenshot' source='5be99796-1f56-44c7-a475-edeaa7cc2f59-attachment.png' type='image/png' size='171759'/>
+            </attachments>
+            <failure>
+                <message>dontSeeElement is not defined</message>
+                <stack-trace>ReferenceError: dontSeeElement is not defined
+                    at Test.&lt;anonymous> (/Users/amiros/Desktop/Al-Jazeera_assignment/tests/acceptance/aljazeeraHomePage_test.js:46:3)
+                    at test.fn (/Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/codeceptjs/lib/scenario.js:79:14)
+                    at callFnAsync (/Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/mocha/lib/runnable.js:394:21)
+                    at Runnable.run (/Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/mocha/lib/runnable.js:338:7)
+                    at Runner.runTest (/Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/mocha/lib/runner.js:677:10)
+                    at /Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/mocha/lib/runner.js:800:12
+                    at next (/Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/mocha/lib/runner.js:592:14)
+                    at /Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/mocha/lib/runner.js:602:7
+                    at next (/Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/mocha/lib/runner.js:485:14)
+                    at cbHookRun (/Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/mocha/lib/runner.js:550:7)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

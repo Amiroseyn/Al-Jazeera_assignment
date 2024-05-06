@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1715013077771' stop='1715013082748'>
+    <name>Testing Al-Jazeera home page's most read section:</name>
+    <title>Testing Al-Jazeera home page's most read section:</title>
+    <test-cases>
+        <test-case start='1715013077774' status='failed' stop='1715013082135'>
+            <name>Verify "Most Popular" section is NOT visible on Mobile @mobile</name>
+            <title>Verify "Most Popular" section is NOT visible on Mobile @mobile</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@mobile'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1715013081073' status='failed' stop='1715013082132'>
+                    <name>I resize window "iPhone X"</name>
+                    <title>I resize window "iPhone X"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Main session - Last Seen Screenshot' source='d5e88f78-f5c4-4cad-b280-199c9bbf40fb-attachment.png' type='image/png' size='6410'/>
+            </attachments>
+            <failure>
+                <message>setWindowSize expects width and height of type number</message>
+                <stack-trace>Error: setWindowSize expects width and height of type number
+                    at Browser.setWindowSize (file:///Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/webdriverio/build/commands/browser/setWindowSize.js:27:15)
+                    at Browser.wrapCommandFn (file:///Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/webdriverio/node_modules/@wdio/utils/build/shim.js:72:38)
+                    at Browser.&lt;anonymous> (file:///Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/webdriverio/node_modules/@wdio/utils/build/shim.js:210:24)
+                    at WebDriver.resizeWindow (/Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/codeceptjs/lib/helper/WebDriver.js:2067:25)
+                    at Step.run (/Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/codeceptjs/lib/step.js:123:49)
+                    at /Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/codeceptjs/lib/actor.js:138:23</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

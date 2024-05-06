@@ -1,0 +1,161 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1715018259594' stop='1715018552867'>
+    <name>Testing Al-Jazeera home page's most read section:</name>
+    <title>Testing Al-Jazeera home page's most read section:</title>
+    <test-cases>
+        <test-case start='1715018259596' status='passed' stop='1715018344235'>
+            <name>Verify "Most Read" section is visible @desktop</name>
+            <title>Verify "Most Read" section is visible @desktop</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@desktop'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1715018262927' status='passed' stop='1715018344153'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715018344159' status='passed' stop='1715018344234'>
+                    <name>I see element ".trending-articles"</name>
+                    <title>I see element ".trending-articles"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1715018344268' status='failed' stop='1715018428414'>
+            <name>Verify the number of &lt;li> items in &lt;ol> element @desktop</name>
+            <title>Verify the number of &lt;li> items in &lt;ol> element @desktop</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@desktop'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1715018345958' status='passed' stop='1715018427403'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715018427403' status='failed' stop='1715018428408'>
+                    <name>I wait for element </name>
+                    <title>I wait for element </title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Main session - Last Seen Screenshot' source='3da277ca-44f2-4b0b-bcd5-4196deaa6797-attachment.png' type='image/png' size='1994173'/>
+            </attachments>
+            <failure>
+                <message>waitUntil condition failed with the following reason: Cannot read properties of undefined (reading 'type')</message>
+                <stack-trace>Error: waitUntil condition failed with the following reason: Cannot read properties of undefined (reading 'type')
+                    at file:///Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/webdriverio/build/commands/browser/waitUntil.js:43:15
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+                    at runNextTicks (node:internal/process/task_queues:64:3)
+                    at process.processTimers (node:internal/timers:511:9)
+                    at async Browser.wrapCommandFn (file:///Users/amiros/Desktop/Al-Jazeera_assignment/node_modules/webdriverio/node_modules/@wdio/utils/build/shim.js:72:29)
+                    at async Test.&lt;anonymous> (/Users/amiros/Desktop/Al-Jazeera_assignment/tests/acceptance/aljazeeraHomePage_test.js:24:21)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1715018429665' status='passed' stop='1715018442388'>
+            <name>Verify "Most Popular" section is NOT visible on Mobile @mobile</name>
+            <title>Verify "Most Popular" section is NOT visible on Mobile @mobile</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@mobile'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1715018431450' status='passed' stop='1715018431462'>
+                    <name>I resize window 375, 812</name>
+                    <title>I resize window 375, 812</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715018431462' status='passed' stop='1715018442356'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715018442356' status='passed' stop='1715018442388'>
+                    <name>I dont see element ".trending-articles"</name>
+                    <title>I dont see element ".trending-articles"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1715018442392' status='passed' stop='1715018552810'>
+            <name>Verify "Skip to Most Read" functionality @desktop</name>
+            <title>Verify "Skip to Most Read" functionality @desktop</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@desktop'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1715018444018' status='passed' stop='1715018550278'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715018550278' status='passed' stop='1715018550366'>
+                    <name>I wait for visible ".bypass-block-links-container"</name>
+                    <title>I wait for visible ".bypass-block-links-container"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715018550366' status='passed' stop='1715018550448'>
+                    <name>I click "//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]"</name>
+                    <title>I click "//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715018550449' status='passed' stop='1715018550480'>
+                    <name>I press key ["Tab"]</name>
+                    <title>I press key ["Tab"]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715018550481' status='passed' stop='1715018552435'>
+                    <name>I click "a[href="#most-read-container"]"</name>
+                    <title>I click "a[href="#most-read-container"]"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715018552435' status='passed' stop='1715018552790'>
+                    <name>I wait for visible ".trending-articles", 5</name>
+                    <title>I wait for visible ".trending-articles", 5</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715018552790' status='passed' stop='1715018552800'>
+                    <name>I grab current url </name>
+                    <title>I grab current url </title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715018552801' status='passed' stop='1715018552809'>
+                    <name>I see in current url "#most-read-container"</name>
+                    <title>I see in current url "#most-read-container"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

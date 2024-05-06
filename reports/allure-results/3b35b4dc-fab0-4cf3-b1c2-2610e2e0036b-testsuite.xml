@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1715017104970' stop='1715017108923'>
+    <name>Testing Al-Jazeera home page's most read section:</name>
+    <title>Testing Al-Jazeera home page's most read section:</title>
+    <test-cases>
+        <test-case start='1715017104972' status='passed' stop='1715017108903'>
+            <name>Verify "Most Popular" section is NOT visible on Mobile @mobile</name>
+            <title>Verify "Most Popular" section is NOT visible on Mobile @mobile</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@mobile'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1715017106627' status='passed' stop='1715017106633'>
+                    <name>I resize window 375, 812</name>
+                    <title>I resize window 375, 812</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715017106633' status='passed' stop='1715017108820'>
+                    <name>I am on page "/"</name>
+                    <title>I am on page "/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1715017108821' status='passed' stop='1715017108902'>
+                    <name>I dont see element ".trending-articles"</name>
+                    <title>I dont see element ".trending-articles"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
