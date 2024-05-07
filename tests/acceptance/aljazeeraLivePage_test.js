@@ -1,5 +1,5 @@
 const { I } = inject();
-const HomePage = require('../page_objects/AlJazeeraLivePage');
+const LivePage = require('../page_objects/AlJazeeraLivePage');
 
 Feature('Al-Jazeera Live Player Test');
 
@@ -7,15 +7,15 @@ Feature('Al-Jazeera Live Player Test');
 Scenario('Verify Livestream Player is visible', async () => {
     try {
       I.amOnPage('/live');
-      const homePage = new HomePage();
-      const playerSelector = homePage.elements.playerSelector;
-      const adVisible = await I.grabNumberOfVisibleElements(homePage.elements.adSelector) > 0;
+      const livePage = new LivePage();
+      const playerSelector = livePage.elements.playerSelector;
+      const adVisible = await I.grabNumberOfVisibleElements(livePage.elements.adSelector) > 0;
 
       if (adVisible) {
         I.wait(6);
-        const adStillVisible = await I.grabNumberOfVisibleElements(homePage.elements.adSelector) > 0;
+        const adStillVisible = await I.grabNumberOfVisibleElements(livePage.elements.adSelector) > 0;
         if (adStillVisible) {
-          I.click(homePage.elements.skipAdButtonSelector);
+          I.click(livePage.elements.skipAdButtonSelector);
         I.wait(2);
         }
       }
@@ -33,8 +33,8 @@ Scenario('Verify Livestream Player is visible', async () => {
 Scenario('Verify Switch Player button is visible in Livestream Player', async () => {
   try {
     I.amOnPage('/live');
-    const homePage = new HomePage();
-    const switchPlayer = homePage.elements.switchPlayer;
+    const livePage = new LivePage();
+    const switchPlayer = livePage.elements.switchPlayer;
   
     I.waitForVisible(switchPlayer);
     I.seeElement(switchPlayer); // Asserts the visibility of the Switch Player button
