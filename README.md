@@ -28,16 +28,16 @@ Before running the tests, ensure you have the following installed:
 
 1. Clone this repository:
 
-   ```bash
-   git clone https://github.com/Amiroseyn/Al-Jazeera_assignment/
-   ```
+ ```bash
+ git clone https://github.com/Amiroseyn/Al-Jazeera_assignment/
+ ```
 
 2. Install dependencies:
 
-    ```bash
-    cd <project_folder>
-    npm install
-    ```
+  ```bash
+  cd <project_folder>
+  npm install
+  ```
 
 3. Install [codeceptJS](https://codecept.io/installation/)
 
