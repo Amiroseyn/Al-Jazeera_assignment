@@ -90,5 +90,4 @@ The Issues I faced and Solutions I came up with:
 
 ## Contributors
 Amir Vafaei
-ChatGPT3.5
 
