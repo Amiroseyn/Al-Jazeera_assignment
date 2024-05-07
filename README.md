@@ -39,13 +39,13 @@ Before running the tests, ensure you have the following installed:
     ```
 
 ## Running Tests
-## Running all tests:
+### Running all tests:
 
   ```bash
   npx codeceptjs run --plugins allure
   ```
 
-## Run Tests by Tag
+### Run Tests by Tag
 To run tests with specific tags:
 
   ```bash
