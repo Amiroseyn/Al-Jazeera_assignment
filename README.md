@@ -78,14 +78,14 @@ allure open reports/allure-report
 ```
 This will open an interactive report in your default browser.
 
-## Troubleshooting
+## Learning
 
-Known Issues and Solutions
+The Issues I faced and Solutions I came up with:
 - **Test Recognition**: Ensure correct paths are configured in codecept.conf.js.
 - **Page Object Import**: Double-check page object file imports.
 - **Advertisement Playback**: Implement logic to handle advertisement interruptions.
 - **Mobile Testing**: Use resizeWindow() to simulate mobile viewport.
-- **Slow Test Execution**: Investigate and optimize browser wait times and test logic.
+- **Slow Test Execution**: I was not able to find a solution to this. It seems like the tests are running only after the page has been fully loaded.
 
 
 ## Contributors
