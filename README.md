@@ -66,11 +66,11 @@ This will open an interactive report in your default browser.
 ## Troubleshooting
 
 Known Issues and Solutions
-- Test Recognition: Ensure correct paths are configured in codecept.conf.js.
-- Page Object Import: Double-check page object file imports.
-- Advertisement Playback: Implement logic to handle advertisement interruptions.
-- Mobile Testing: Use resizeWindow() to simulate mobile viewport.
-- Slow Test Execution: Investigate and optimize browser wait times and test logic.
+- **Test Recognition**: Ensure correct paths are configured in codecept.conf.js.
+- **Page Object Import**: Double-check page object file imports.
+- **Advertisement Playback**: Implement logic to handle advertisement interruptions.
+- **Mobile Testing**: Use resizeWindow() to simulate mobile viewport.
+- **Slow Test Execution**: Investigate and optimize browser wait times and test logic.
 
 
 ## Contributors
