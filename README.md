@@ -51,7 +51,7 @@ Before running the tests, ensure you have the following installed:
   npx codeceptjs init
   ```
 
-  After choosing default helper (Playwright, Puppeteer, WebDriver, etc) a corresponding package should be installed automatically.
+  After choosing default helper (WebDriver, in this case) a corresponding package should be installed automatically.
 
 ## Running Tests
 ### Running all tests
