@@ -37,7 +37,7 @@ Scenario('Verify Switch Player button is visible in Livestream Player', async ()
     const switchPlayer = livePage.elements.switchPlayer;
   
     I.waitForVisible(switchPlayer);
-    I.seeElement(switchPlayer); // Asserts the visibility of the Switch Player button
+    I.seeElement(switchPlayer); 
   } catch (error) {
     console.error('The "Switch Player" button is not visible on the page:', error);
     throw error;
