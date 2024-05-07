@@ -29,11 +29,51 @@ Before running the tests, ensure you have the following installed:
 
    ```bash
    git clone <repository_url>
+   ```
 
 2. Install dependencies:
 
-  ```bash
-  cd <project_folder>
-  npm install
+    ```bash
+    cd <project_folder>
+    npm install
+    ```
 
 ## Running Tests
+## Running all tests:
+
+  ```bash
+  npx codeceptjs run --plugins allure
+  ```
+
+## Run Tests by Tag
+To run tests with specific tags:
+
+  ```bash
+  npx codeceptjs run --grep @tagName --plugins allure
+  ```
+
+Replace @tagName with the desired tag (e.g., @Desktop, @Mobile, @Live).
+
+## Viewing Test Reports
+After running tests, generate and view Allure reports using the following commands:
+
+```bash
+allure generate reports/allure-results --clean -o reports/allure-report
+allure open reports/allure-report
+```
+This will open an interactive report in your default browser.
+
+## Troubleshooting
+
+Known Issues and Solutions
+- Test Recognition: Ensure correct paths are configured in codecept.conf.js.
+- Page Object Import: Double-check page object file imports.
+- Advertisement Playback: Implement logic to handle advertisement interruptions.
+- Mobile Testing: Use resizeWindow() to simulate mobile viewport.
+- Slow Test Execution: Investigate and optimize browser wait times and test logic.
+
+
+## Contributors
+Amir Vafaei
+ChatGPT3.5
+
