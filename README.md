@@ -39,6 +39,20 @@ Before running the tests, ensure you have the following installed:
     npm install
     ```
 
+3. Install [codeceptJS](https://codecept.io/installation/)
+
+  ```bash
+  npm init -y
+  ```
+
+  Install CodeceptJS with NPM:
+
+  ```bash
+  npx codeceptjs init
+  ```
+
+  After choosing default helper (Playwright, Puppeteer, WebDriver, etc) a corresponding package should be installed automatically.
+
 ## Running Tests
 ### Running all tests
 
