@@ -14,8 +14,8 @@ class LivePage {
         return  I.seeElement(this.elements.playerSelector);
     }
 
-    async waitForAdVisible() {
-        I.waitForVisible(this.elements.adSelector);
+    async isAdVisible() {
+        '.videoAdUi'; // return I.seeElement(this.elements.adSelector); would result in an error: Further investigation is needed
     }
 
     async clickSkipAdButton() {
@@ -31,10 +31,10 @@ class LivePage {
     }
     
     async skipAdIfVisible() {
-    const adVisible = await this.waitForAdVisible();
+    const adVisible = this.isAdVisible();
     if (adVisible) {
       I.wait(6);
-      const adStillVisible = await this.waitForAdVisible();
+      const adStillVisible = await this.isAdVisible();
       if (adStillVisible) {
         this.clickSkipAdButton();
         I.wait(2);

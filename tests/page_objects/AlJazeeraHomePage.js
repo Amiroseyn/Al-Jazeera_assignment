@@ -6,20 +6,33 @@ class HomePage {
     this.elements = locators; 
   }
 
-  // Method to click on the empty space left of the logo
-  clickEmptySpaceLeftOfLogo() {
-    I.click(this.elements.logo); // Click on the logo to activate the empty space
+  async isMostPopularVisible() {
+    I.seeElement(this.elements.mostPopular);
   }
 
-  // Method to click on "Skip to Most Read" link in the bypass blocks menu
-  skipToMostRead() {
+  async waitForMostPopularVisible() {
+    I.waitForElement(this.elements.mostPopular);
+  }
+
+  async noMostPopularMobile() {
+  I.dontSeeElement(this.elements.mostPopular);
+  }
+
+  async waitForBypassMenuVisible() {
+    I.waitForVisible(this.elements.bypassBlocksMenu);
+    }
+
+  async clickEmptySpaceLeftOfLogo() {
+    I.click(this.elements.logo); 
+  }
+
+  async skipToMostRead() {
     this.openBypassBlocksMenu();
     I.click(this.elements.skipToMostReadLink);
   }
 
-  // Method to open the bypass blocks menu by tab navigation
-  openBypassBlocksMenu() {
-    I.pressKey(['Tab']); // Navigate backwards to trigger bypass blocks menu
+  async openBypassBlocksMenu() {
+    I.pressKey(['Tab']); 
   }
 }
 

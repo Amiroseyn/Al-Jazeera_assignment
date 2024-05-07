@@ -16,7 +16,7 @@ Scenario('Verify Livestream Player is visible', async () => {
       console.error('Error occurred during Livestream Player verification:', error);
       throw error;
     }
-  }).tag('@live1');
+  }).tag('@live');
 
 // Scenario 2: validate Switch Player button is visible in Livestream Player
 Scenario('Verify Switch Player button is visible in Livestream Player', async () => {

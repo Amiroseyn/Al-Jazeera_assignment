@@ -9,7 +9,7 @@ Scenario('Verify "Most Popular" section is visible', async () => {
   try {
     I.amOnPage('/');
     const homePage = new HomePage();
-    I.seeElement(homePage.elements.mostPopular);
+    homePage.isMostPopularVisible();
   } catch (error) {
     console.error("Failed to verify visibility of the Most Popular section on Desktop:", error);
     throw error;
@@ -21,7 +21,7 @@ Scenario('Verify the number of <li> items in <ol> element', async () => {
   try {
     I.amOnPage('/');
     const homePage = new HomePage();
-    I.waitForElement(homePage.elements.mostPopular);
+    await homePage.waitForMostPopularVisible();
     const liCount = await I.grabNumberOfVisibleElements(`${homePage.elements.mostPopular} > li`);
     if (liCount !== 10) {
       throw new Error(`Expected 10 <li> items but found ${liCount}`);
@@ -38,7 +38,7 @@ Scenario('Verify "Most Popular" section is NOT visible on Mobile', async () => {
     I.resizeWindow(375, 812); // iPhone X viewport size
     I.amOnPage('/');
     const homePage = new HomePage();
-    I.dontSeeElement(homePage.elements.mostPopular);
+    homePage.noMostPopularMobile();
   } catch (error) {
     console.error("Error occurred in verifying the visibility of the Most Popular section on Mobile:", error);
     throw error;
@@ -50,10 +50,10 @@ Scenario('Verify "Skip to Most Read" functionality', async () => {
   try {
     I.amOnPage('/');
     const homePage = new HomePage();
-    I.waitForVisible(homePage.elements.bypassBlocksMenu);
+    homePage.waitForBypassMenuVisible();
     homePage.clickEmptySpaceLeftOfLogo();
     homePage.skipToMostRead();
-    I.waitForVisible(homePage.elements.mostPopular, 5);
+    homePage.waitForMostPopularVisible();
     const currentUrl = await I.grabCurrentUrl();
     I.seeInCurrentUrl('#most-read-container');
   } catch (error) {
