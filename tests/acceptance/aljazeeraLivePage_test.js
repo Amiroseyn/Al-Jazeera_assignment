@@ -8,36 +8,34 @@ Scenario('Verify Livestream Player is visible', async () => {
     try {
       I.amOnPage('/live');
       const livePage = new LivePage();
-      const playerSelector = livePage.elements.playerSelector;
-      const adVisible = await I.grabNumberOfVisibleElements(livePage.elements.adSelector) > 0;
+    //   const adVisible = await livePage.waitForAdVisible() > 0;
 
-      if (adVisible) {
-        I.wait(6);
-        const adStillVisible = await I.grabNumberOfVisibleElements(livePage.elements.adSelector) > 0;
-        if (adStillVisible) {
-          I.click(livePage.elements.skipAdButtonSelector);
-        I.wait(2);
-        }
-      }
+    //   if (adVisible) {
+    //     I.wait(6);
+    //     const adStillVisible = await livePage.waitForAdVisible() > 0;
+    //     if (adStillVisible) {
+        //   livePage.clickSkipAdButton();
+    //     I.wait(2);
+    //     }
+    //   }
 
-      I.waitForVisible(playerSelector);
-      I.seeElement(playerSelector);
+      await livePage.waitForPlayerVisible()
+      livePage.isPlayerVisible()
 
     } catch (error) {
       console.error('Error occurred during Livestream Player verification:', error);
       throw error;
     }
-  }).tag('@live');
+  }).tag('@live1');
 
 // Scenario 2: validate Switch Player button is visible in Livestream Player
 Scenario('Verify Switch Player button is visible in Livestream Player', async () => {
   try {
     I.amOnPage('/live');
     const livePage = new LivePage();
-    const switchPlayer = livePage.elements.switchPlayer;
   
-    I.waitForVisible(switchPlayer);
-    I.seeElement(switchPlayer); 
+    await livePage.waitForSwitchPlayerButtonVisible()
+    livePage.isSwitchPlayerButtonVisible()
   } catch (error) {
     console.error('The "Switch Player" button is not visible on the page:', error);
     throw error;
