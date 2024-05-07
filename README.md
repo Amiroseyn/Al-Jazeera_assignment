@@ -28,7 +28,7 @@ Before running the tests, ensure you have the following installed:
 1. Clone this repository:
 
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/Amiroseyn/Al-Jazeera_assignment/
    ```
 
 2. Install dependencies:
@@ -39,7 +39,7 @@ Before running the tests, ensure you have the following installed:
     ```
 
 ## Running Tests
-### Running all tests:
+### Running all tests
 
   ```bash
   npx codeceptjs run --plugins allure
