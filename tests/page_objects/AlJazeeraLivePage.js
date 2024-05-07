@@ -1,10 +1,10 @@
 const { I } = inject();
 const locators = require('./locators');
 
-class HomePage {
+class LivePage {
   constructor() {
     this.elements = locators; 
   }
 }
 
-module.exports = HomePage;
+module.exports = LivePage;
