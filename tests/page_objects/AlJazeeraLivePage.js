@@ -29,6 +29,19 @@ class LivePage {
     async isSwitchPlayerButtonVisible() {
         return I.seeElement(this.elements.switchPlayer);
     }
+    
+    async skipAdIfVisible() {
+    const adVisible = await this.waitForAdVisible();
+    if (adVisible) {
+      I.wait(6);
+      const adStillVisible = await this.waitForAdVisible();
+      if (adStillVisible) {
+        this.clickSkipAdButton();
+        I.wait(2);
+      }
+    }
+  }
+    
 }
 
 module.exports = LivePage;
