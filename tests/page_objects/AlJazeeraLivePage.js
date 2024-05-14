@@ -11,7 +11,6 @@ class LivePage {
     }
 
     async isPlayerVisible() {
-        // return I.seeElement(this.elements.playerSelector);
         const visibleElements = await I.grabNumberOfVisibleElements(this.elements.playerSelector);
         return visibleElements > 0;
     }

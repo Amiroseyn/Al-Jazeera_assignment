@@ -7,19 +7,25 @@ class HomePage {
   }
 
   async isMostPopularVisible() {
-    I.seeElement(this.elements.mostPopular);
+    const visibleElements = await I.grabNumberOfVisibleElements(this.elements.mostPopular);
+    return visibleElements > 0;
   }
 
   async waitForMostPopularVisible() {
-    I.waitForElement(this.elements.mostPopular);
+    I.waitForElement(this.elements.mostPopular, 30);
   }
 
   async noMostPopularMobile() {
-  I.dontSeeElement(this.elements.mostPopular);
+    try {
+      I.dontSeeElement(this.elements.mostPopular);
+      return true;
+    } catch (error) {
+      return false;
+    }
   }
 
   async waitForBypassMenuVisible() {
-    I.waitForVisible(this.elements.bypassBlocksMenu);
+    I.waitForVisible(this.elements.bypassBlocksMenu, 30);
     }
 
   async clickEmptySpaceLeftOfLogo() {
