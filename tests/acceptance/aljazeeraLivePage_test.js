@@ -9,12 +9,9 @@ Scenario('Verify Livestream Player is visible', async () => {
     try {
       I.amOnPage('/live');
       const livePage = new LivePage();
-      console.log("skip Ad If Visible -----")
-      console.log("wait for plater Visible -----")
-      const amir = await livePage.isPlayerVisible();
-      console.log("is Player Visible -----", amir)
+      const result = await livePage.isPlayerVisible();
 
-      expect(amir).to.be.true;
+      expect(result).to.be.true;
     
     } catch (error) {
       console.error('Error occurred during Livestream Player verification:', error);
@@ -29,7 +26,9 @@ Scenario('Verify Switch Player button is visible in Livestream Player', async ()
     const livePage = new LivePage();
   
     await livePage.waitForSwitchPlayerButtonVisible();
-    livePage.isSwitchPlayerButtonVisible();
+    const result = await livePage.isSwitchPlayerButtonVisible();
+
+    expect(result).to.be.true;
   } catch (error) {
     console.error('The "Switch Player" button is not visible on the page:', error);
     throw error;

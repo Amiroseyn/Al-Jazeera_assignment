@@ -29,7 +29,8 @@ class LivePage {
     }
 
     async isSwitchPlayerButtonVisible() {
-        return I.seeElement(this.elements.switchPlayer);
+        const visibleElements = await I.grabNumberOfVisibleElements(this.elements.playerSelector);
+        return visibleElements > 0;
     }
     
     async skipAdIfVisible() {
