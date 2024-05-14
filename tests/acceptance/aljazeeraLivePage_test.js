@@ -1,4 +1,5 @@
 const { I } = inject();
+const { expect } = require('chai');
 const LivePage = require('../page_objects/AlJazeeraLivePage');
 
 Feature('Al-Jazeera Live Player Test');
@@ -8,9 +9,12 @@ Scenario('Verify Livestream Player is visible', async () => {
     try {
       I.amOnPage('/live');
       const livePage = new LivePage();
-      livePage.skipAdIfVisible();
-      await livePage.waitForPlayerVisible();
-      livePage.isPlayerVisible();
+      console.log("skip Ad If Visible -----")
+      console.log("wait for plater Visible -----")
+      const amir = await livePage.isPlayerVisible();
+      console.log("is Player Visible -----", amir)
+
+      expect(amir).to.be.true;
     
     } catch (error) {
       console.error('Error occurred during Livestream Player verification:', error);

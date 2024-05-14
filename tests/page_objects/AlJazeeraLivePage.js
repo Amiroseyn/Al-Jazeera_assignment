@@ -7,23 +7,25 @@ class LivePage {
     }
 
     async waitForPlayerVisible() {
-        I.waitForVisible(this.elements.playerSelector);
+        return I.waitForVisible(this.elements.playerSelector);
     }
 
     async isPlayerVisible() {
-        return  I.seeElement(this.elements.playerSelector);
+        // return I.seeElement(this.elements.playerSelector);
+        const visibleElements = await I.grabNumberOfVisibleElements(this.elements.playerSelector);
+        return visibleElements > 0;
     }
 
     async isAdVisible() {
-        '.videoAdUi'; // return I.seeElement(this.elements.adSelector); would result in an error: Further investigation is needed
+        return I.waitForElement(this.elements.adSelector); 
     }
 
     async clickSkipAdButton() {
-        I.click(this.elements.skipAdButtonSelector);
+        return I.click(this.elements.skipAdButtonSelector);
     }
 
     async waitForSwitchPlayerButtonVisible() {
-        I.waitForVisible(this.elements.switchPlayer);
+        return I.waitForVisible(this.elements.switchPlayer);
     }
 
     async isSwitchPlayerButtonVisible() {
@@ -31,15 +33,12 @@ class LivePage {
     }
     
     async skipAdIfVisible() {
-    const adVisible = this.isAdVisible();
-    if (adVisible) {
-      I.wait(6);
-      const adStillVisible = await this.isAdVisible();
-      if (adStillVisible) {
-        this.clickSkipAdButton();
-        I.wait(2);
-      }
-    }
+        try {
+            await I.waitForElement(this.elements.adSelector);
+            await I.waitForElement(this.elements.skipAdButtonSelector);
+            this.clickSkipAdButton();
+        } catch (e) {
+        } 
   }
     
 }
